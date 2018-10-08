@@ -102,6 +102,9 @@ class Menu extends React.Component {
                     <Link to="/components">Components</Link>
                 </li>
                 <li>
+                    <Link to="/blog">Blog</Link>
+                </li>
+                <li>
                     <a href="https://facebook.com">
                         <FB/>
                     </a>
@@ -130,6 +133,9 @@ class Menu extends React.Component {
                             </li>
                             <li>
                                 <Link to="/components">Components</Link>
+                            </li>
+                            <li>
+                                <Link to="/blog">Blog</Link>
                             </li>
                         </MobileMenu>
                     </Burger>

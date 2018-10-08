@@ -23,7 +23,7 @@ class Hero extends React.Component {
             <HeroStyled>
                 <Title>{title}</Title>
                 <SubTitle>{subTitle}</SubTitle>
-                <Button>View Repo</Button>
+                <a href="https://github.com/freddiemixell/WordPress-React"><Button>View Repo</Button></a>
             </HeroStyled>
         );
     }

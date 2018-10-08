@@ -4,7 +4,7 @@ import { Wrapper, LoaderWrapper } from '../components/pageExport';
 import fetch from 'isomorphic-fetch';
 import PacmanLoader from 'react-spinners/PacmanLoader';
 
-class Page extends React.Component {
+class BlogPost extends React.Component {
     
     constructor(props) {
         super(props);
@@ -32,7 +32,7 @@ class Page extends React.Component {
                 })
             , this.timeIncrementMs);
 
-            fetch(`/wp-json/freddie/v2/page/?slug=${slug}`)
+            fetch(`/wp-json/freddie/v2/post/?slug=${slug}`)
             .then(res => {
                 return res.json();
             }).then(value => {
@@ -55,7 +55,7 @@ class Page extends React.Component {
             })
         , this.timeIncrementMs);
 
-        fetch(`/wp-json/freddie/v2/page/?slug=${slug}`)
+        fetch(`/wp-json/freddie/v2/post/?slug=${slug}`)
         .then(res => {
             return res.json();
         }).then(value => {
@@ -82,14 +82,7 @@ class Page extends React.Component {
             this.state.msElapsed <= this.showSpinnerIfReturnGreaterThanMs) {
             return (null);
         }
-        if ( typeof page.title === 'undefined') {
-            return (
-                <Wrapper>
-                    <Head/>
-                    <h2>404 Page Not Found.</h2>
-                </Wrapper>
-            );
-        }
+
         return (
             <Wrapper>
                 <Head/>
@@ -100,4 +93,4 @@ class Page extends React.Component {
     }
 }
 
-export default Page;
+export default BlogPost;
