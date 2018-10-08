@@ -4,6 +4,7 @@
     "private": true,
     "dependencies": {
         "@devloco/react-scripts-wptheme": "1.2.4",
+        "express": "^4.16.3",
         "prop-types": "^15.6.2",
         "react": "^16.5.2",
         "react-burger-menu": "^2.5.3",
@@ -26,5 +27,6 @@
         "wpstart": "wptheme-scripts wpstart"
     },
     "homepage": "/wp-content/themes/wordpress-react",
-    "browserLaunchTo": "http://localhost:8888"
+    "browserLaunchTo": "http://localhost:8888",
+    "proxy": "http://localhost:8888"
 }
