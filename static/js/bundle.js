@@ -48796,9 +48796,10 @@ module.exports = function(originalModule) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router_dom__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_Home__ = __webpack_require__(/*! ./pages/Home */ "./src/pages/Home.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_Page__ = __webpack_require__(/*! ./pages/Page */ "./src/pages/Page.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_Blog__ = __webpack_require__(/*! ./pages/Blog */ "./src/pages/Blog.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_Header__ = __webpack_require__(/*! ./components/Header */ "./src/components/Header.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_Footer__ = __webpack_require__(/*! ./components/Footer */ "./src/components/Footer.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_BlogPost__ = __webpack_require__(/*! ./pages/BlogPost */ "./src/pages/BlogPost.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_Blog__ = __webpack_require__(/*! ./pages/Blog */ "./src/pages/Blog.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_Header__ = __webpack_require__(/*! ./components/Header */ "./src/components/Header.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_Footer__ = __webpack_require__(/*! ./components/Footer */ "./src/components/Footer.js");
 var _jsxFileName = "/Applications/MAMP/htdocs/wp-content/themes/wordpress-react/react-src/src/App.js";
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -48808,6 +48809,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
 
 
 
@@ -48834,7 +48836,7 @@ var App = function (_React$Component) {
         {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 12
+            lineNumber: 13
           },
           __self: this
         },
@@ -48843,14 +48845,14 @@ var App = function (_React$Component) {
           {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 13
+              lineNumber: 14
             },
             __self: this
           },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__components_Header__["a" /* default */], {
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__components_Header__["a" /* default */], {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 14
+              lineNumber: 15
             },
             __self: this
           }),
@@ -48859,33 +48861,39 @@ var App = function (_React$Component) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 15
+                lineNumber: 16
               },
               __self: this
             },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["c" /* Route */], { exact: true, path: "/", component: __WEBPACK_IMPORTED_MODULE_2__pages_Home__["a" /* default */], __source: {
                 fileName: _jsxFileName,
-                lineNumber: 16
+                lineNumber: 17
               },
               __self: this
             }),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["c" /* Route */], { path: "/blog/:slug", component: __WEBPACK_IMPORTED_MODULE_4__pages_Blog__["a" /* default */], __source: {
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["c" /* Route */], { exact: true, path: "/blog", component: __WEBPACK_IMPORTED_MODULE_5__pages_Blog__["a" /* default */], __source: {
                 fileName: _jsxFileName,
-                lineNumber: 17
+                lineNumber: 18
+              },
+              __self: this
+            }),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["c" /* Route */], { path: "/blog/:slug", component: __WEBPACK_IMPORTED_MODULE_4__pages_BlogPost__["a" /* default */], __source: {
+                fileName: _jsxFileName,
+                lineNumber: 19
               },
               __self: this
             }),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["c" /* Route */], { path: "/:slug", component: __WEBPACK_IMPORTED_MODULE_3__pages_Page__["a" /* default */], __source: {
                 fileName: _jsxFileName,
-                lineNumber: 18
+                lineNumber: 20
               },
               __self: this
             })
           ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__components_Footer__["a" /* default */], {
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__components_Footer__["a" /* default */], {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 20
+              lineNumber: 22
             },
             __self: this
           })
@@ -49043,13 +49051,13 @@ var Footer = function (_React$Component) {
                                 },
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                     __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Link */],
-                                    { to: '/topics', __source: {
+                                    { to: '/components', __source: {
                                             fileName: _jsxFileName,
                                             lineNumber: 85
                                         },
                                         __self: this
                                     },
-                                    'Topics'
+                                    'Components'
                                 )
                             ),
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -49062,17 +49070,37 @@ var Footer = function (_React$Component) {
                                     __self: this
                                 },
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Link */],
+                                    { to: '/blog', __source: {
+                                            fileName: _jsxFileName,
+                                            lineNumber: 88
+                                        },
+                                        __self: this
+                                    },
+                                    'Blog'
+                                )
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'li',
+                                {
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 90
+                                    },
+                                    __self: this
+                                },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                     'a',
                                     { href: 'https://facebook.com', __source: {
                                             fileName: _jsxFileName,
-                                            lineNumber: 88
+                                            lineNumber: 91
                                         },
                                         __self: this
                                     },
                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(FB, {
                                         __source: {
                                             fileName: _jsxFileName,
-                                            lineNumber: 89
+                                            lineNumber: 92
                                         },
                                         __self: this
                                     })
@@ -49083,7 +49111,7 @@ var Footer = function (_React$Component) {
                                 {
                                     __source: {
                                         fileName: _jsxFileName,
-                                        lineNumber: 92
+                                        lineNumber: 95
                                     },
                                     __self: this
                                 },
@@ -49091,14 +49119,14 @@ var Footer = function (_React$Component) {
                                     'a',
                                     { href: 'https://twitter.com/freddiemixell', __source: {
                                             fileName: _jsxFileName,
-                                            lineNumber: 93
+                                            lineNumber: 96
                                         },
                                         __self: this
                                     },
                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Tweet, {
                                         __source: {
                                             fileName: _jsxFileName,
-                                            lineNumber: 94
+                                            lineNumber: 97
                                         },
                                         __self: this
                                     })
@@ -49109,7 +49137,7 @@ var Footer = function (_React$Component) {
                                 {
                                     __source: {
                                         fileName: _jsxFileName,
-                                        lineNumber: 97
+                                        lineNumber: 100
                                     },
                                     __self: this
                                 },
@@ -49117,14 +49145,14 @@ var Footer = function (_React$Component) {
                                     'a',
                                     { href: 'https://instagram.com', __source: {
                                             fileName: _jsxFileName,
-                                            lineNumber: 98
+                                            lineNumber: 101
                                         },
                                         __self: this
                                     },
                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Insta, {
                                         __source: {
                                             fileName: _jsxFileName,
-                                            lineNumber: 99
+                                            lineNumber: 102
                                         },
                                         __self: this
                                     })
@@ -49135,7 +49163,7 @@ var Footer = function (_React$Component) {
                                 {
                                     __source: {
                                         fileName: _jsxFileName,
-                                        lineNumber: 102
+                                        lineNumber: 105
                                     },
                                     __self: this
                                 },
@@ -49143,14 +49171,14 @@ var Footer = function (_React$Component) {
                                     'a',
                                     { href: 'https://github.com/freddiemixell', __source: {
                                             fileName: _jsxFileName,
-                                            lineNumber: 103
+                                            lineNumber: 106
                                         },
                                         __self: this
                                     },
                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Git, {
                                         __source: {
                                             fileName: _jsxFileName,
-                                            lineNumber: 104
+                                            lineNumber: 107
                                         },
                                         __self: this
                                     })
@@ -49162,7 +49190,7 @@ var Footer = function (_React$Component) {
                             {
                                 __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 108
+                                    lineNumber: 111
                                 },
                                 __self: this
                             },
@@ -49171,14 +49199,14 @@ var Footer = function (_React$Component) {
                                 {
                                     __source: {
                                         fileName: _jsxFileName,
-                                        lineNumber: 109
+                                        lineNumber: 112
                                     },
                                     __self: this
                                 },
                                 'Made with ',
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { className: 'heart', __source: {
                                         fileName: _jsxFileName,
-                                        lineNumber: 109
+                                        lineNumber: 112
                                     },
                                     __self: this
                                 }),
@@ -49546,17 +49574,37 @@ var Menu = function (_React$Component) {
                             __self: this
                         },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Link */],
+                            { to: '/blog', __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 105
+                                },
+                                __self: this
+                            },
+                            'Blog'
+                        )
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'li',
+                        {
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 107
+                            },
+                            __self: this
+                        },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                             'a',
                             { href: 'https://facebook.com', __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 105
+                                    lineNumber: 108
                                 },
                                 __self: this
                             },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(FB, {
                                 __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 106
+                                    lineNumber: 109
                                 },
                                 __self: this
                             })
@@ -49567,7 +49615,7 @@ var Menu = function (_React$Component) {
                         {
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 109
+                                lineNumber: 112
                             },
                             __self: this
                         },
@@ -49575,14 +49623,14 @@ var Menu = function (_React$Component) {
                             'a',
                             { href: 'https://twitter.com/freddiemixell', __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 110
+                                    lineNumber: 113
                                 },
                                 __self: this
                             },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Tweet, {
                                 __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 111
+                                    lineNumber: 114
                                 },
                                 __self: this
                             })
@@ -49593,7 +49641,7 @@ var Menu = function (_React$Component) {
                         {
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 114
+                                lineNumber: 117
                             },
                             __self: this
                         },
@@ -49601,14 +49649,14 @@ var Menu = function (_React$Component) {
                             'a',
                             { href: 'https://instagram.com', __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 115
+                                    lineNumber: 118
                                 },
                                 __self: this
                             },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Insta, {
                                 __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 116
+                                    lineNumber: 119
                                 },
                                 __self: this
                             })
@@ -49619,7 +49667,7 @@ var Menu = function (_React$Component) {
                         {
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 119
+                                lineNumber: 122
                             },
                             __self: this
                         },
@@ -49627,14 +49675,14 @@ var Menu = function (_React$Component) {
                             'a',
                             { href: 'https://github.com/freddiemixell', __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 120
+                                    lineNumber: 123
                                 },
                                 __self: this
                             },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Git, {
                                 __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 121
+                                    lineNumber: 124
                                 },
                                 __self: this
                             })
@@ -49646,7 +49694,7 @@ var Menu = function (_React$Component) {
                     {
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 125
+                            lineNumber: 128
                         },
                         __self: this
                     },
@@ -49654,7 +49702,7 @@ var Menu = function (_React$Component) {
                         __WEBPACK_IMPORTED_MODULE_10_react_burger_menu__["slide"],
                         { right: true, isOpen: false, styles: __WEBPACK_IMPORTED_MODULE_9__pageExport__["a" /* BurgerStyles */], __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 126
+                                lineNumber: 129
                             },
                             __self: this
                         },
@@ -49663,30 +49711,10 @@ var Menu = function (_React$Component) {
                             {
                                 __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 127
+                                    lineNumber: 130
                                 },
                                 __self: this
                             },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'li',
-                                {
-                                    __source: {
-                                        fileName: _jsxFileName,
-                                        lineNumber: 128
-                                    },
-                                    __self: this
-                                },
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Link */],
-                                    { to: '/about', __source: {
-                                            fileName: _jsxFileName,
-                                            lineNumber: 129
-                                        },
-                                        __self: this
-                                    },
-                                    'About'
-                                )
-                            ),
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                 'li',
                                 {
@@ -49698,13 +49726,53 @@ var Menu = function (_React$Component) {
                                 },
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                     __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Link */],
-                                    { to: '/components', __source: {
+                                    { to: '/about', __source: {
                                             fileName: _jsxFileName,
                                             lineNumber: 132
                                         },
                                         __self: this
                                     },
+                                    'About'
+                                )
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'li',
+                                {
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 134
+                                    },
+                                    __self: this
+                                },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Link */],
+                                    { to: '/components', __source: {
+                                            fileName: _jsxFileName,
+                                            lineNumber: 135
+                                        },
+                                        __self: this
+                                    },
                                     'Components'
+                                )
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'li',
+                                {
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 137
+                                    },
+                                    __self: this
+                                },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Link */],
+                                    { to: '/blog', __source: {
+                                            fileName: _jsxFileName,
+                                            lineNumber: 138
+                                        },
+                                        __self: this
+                                    },
+                                    'Blog'
                                 )
                             )
                         )
@@ -50063,6 +50131,108 @@ var Album = function (_React$Component) {
 
 /***/ }),
 
+/***/ "./src/components/styled-section/AlbumHero.js":
+/*!****************************************************!*\
+  !*** ./src/components/styled-section/AlbumHero.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/*! exports used: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_styled_components__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+var _jsxFileName = '/Applications/MAMP/htdocs/wp-content/themes/wordpress-react/react-src/src/components/styled-section/AlbumHero.js';
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _templateObject = _taggedTemplateLiteral(['\n    padding: 2rem 1rem;\n    margin-bottom: 2rem;\n    background-color: #e9ecef;\n    border-radius: .3rem;\n    ', '\n'], ['\n    padding: 2rem 1rem;\n    margin-bottom: 2rem;\n    background-color: #e9ecef;\n    border-radius: .3rem;\n    ', '\n']),
+    _templateObject2 = _taggedTemplateLiteral(['\n    font-size: 2.5rem;\n    font-weight: 300;\n    margin: 0;\n    margin-bottom: .5rem;\n    font-family: inherit;\n    line-height: 1.2;\n    color: inherit;\n'], ['\n    font-size: 2.5rem;\n    font-weight: 300;\n    margin: 0;\n    margin-bottom: .5rem;\n    font-family: inherit;\n    line-height: 1.2;\n    color: inherit;\n']),
+    _templateObject3 = _taggedTemplateLiteral(['\n    padding-right: 15px;\n    padding-left: 15px;\n    margin-right: auto;\n    margin-left: auto;\n    p {\n        font-size: 1.25rem;\n        font-weight: 300;\n        margin-top: 0;\n        margin-bottom: 1rem;\n        color: #6c757d!important;\n    }\n'], ['\n    padding-right: 15px;\n    padding-left: 15px;\n    margin-right: auto;\n    margin-left: auto;\n    p {\n        font-size: 1.25rem;\n        font-weight: 300;\n        margin-top: 0;\n        margin-bottom: 1rem;\n        color: #6c757d!important;\n    }\n']);
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+
+
+
+var Jumbotron = __WEBPACK_IMPORTED_MODULE_1_styled_components__["a" /* default */].section(_templateObject, function (props) {
+    return props.textCenter && 'text-align: center!important;';
+});
+
+var JumbotronHeading = __WEBPACK_IMPORTED_MODULE_1_styled_components__["a" /* default */].h1(_templateObject2);
+
+var Container = __WEBPACK_IMPORTED_MODULE_1_styled_components__["a" /* default */].div(_templateObject3);
+
+var AlbumHero = function (_React$Component) {
+    _inherits(AlbumHero, _React$Component);
+
+    function AlbumHero() {
+        _classCallCheck(this, AlbumHero);
+
+        return _possibleConstructorReturn(this, (AlbumHero.__proto__ || Object.getPrototypeOf(AlbumHero)).apply(this, arguments));
+    }
+
+    _createClass(AlbumHero, [{
+        key: 'render',
+        value: function render() {
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                Jumbotron,
+                { textCenter: true, __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 39
+                    },
+                    __self: this
+                },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    Container,
+                    {
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 40
+                        },
+                        __self: this
+                    },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        JumbotronHeading,
+                        {
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 41
+                            },
+                            __self: this
+                        },
+                        'Blog Component'
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'p',
+                        {
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 42
+                            },
+                            __self: this
+                        },
+                        'This is a WordPress Blog but theres no PHP on the frontend! This entire experience is built with React and the WordPress REST API. If you look at the \'Default Headlines\' below, these are coming from whats called Default Props. I\'m using this exact component on the homepage as well but here I didn\'t pass props intentially to show how Default Props work!'
+                    )
+                )
+            );
+        }
+    }]);
+
+    return AlbumHero;
+}(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["a"] = (AlbumHero);
+
+/***/ }),
+
 /***/ "./src/components/styled-section/Hero.js":
 /*!***********************************************!*\
   !*** ./src/components/styled-section/Hero.js ***!
@@ -50150,15 +50320,24 @@ var Hero = function (_React$Component) {
                     subTitle
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    __WEBPACK_IMPORTED_MODULE_3__pageExport__["b" /* Button */],
-                    {
-                        __source: {
+                    'a',
+                    { href: 'https://github.com/freddiemixell/WordPress-React', __source: {
                             fileName: _jsxFileName,
                             lineNumber: 26
                         },
                         __self: this
                     },
-                    'View Repo'
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        __WEBPACK_IMPORTED_MODULE_3__pageExport__["b" /* Button */],
+                        {
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 26
+                            },
+                            __self: this
+                        },
+                        'View Repo'
+                    )
                 )
             );
         }
@@ -50234,13 +50413,86 @@ Object(__WEBPACK_IMPORTED_MODULE_4__registerServiceWorker__["a" /* default */])(
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_styled_section_AlbumHero__ = __webpack_require__(/*! ../components/styled-section/AlbumHero */ "./src/components/styled-section/AlbumHero.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_styled_section_Album__ = __webpack_require__(/*! ../components/styled-section/Album */ "./src/components/styled-section/Album.js");
+var _jsxFileName = '/Applications/MAMP/htdocs/wp-content/themes/wordpress-react/react-src/src/pages/Blog.js';
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+
+var Blog = function (_React$Component) {
+    _inherits(Blog, _React$Component);
+
+    function Blog() {
+        _classCallCheck(this, Blog);
+
+        return _possibleConstructorReturn(this, (Blog.__proto__ || Object.getPrototypeOf(Blog)).apply(this, arguments));
+    }
+
+    _createClass(Blog, [{
+        key: 'render',
+        value: function render() {
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'div',
+                {
+                    __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 8
+                    },
+                    __self: this
+                },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__components_styled_section_AlbumHero__["a" /* default */], {
+                    __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 9
+                    },
+                    __self: this
+                }),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__components_styled_section_Album__["a" /* default */], {
+                    __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 10
+                    },
+                    __self: this
+                })
+            );
+        }
+    }]);
+
+    return Blog;
+}(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["a"] = (Blog);
+
+/***/ }),
+
+/***/ "./src/pages/BlogPost.js":
+/*!*******************************!*\
+  !*** ./src/pages/BlogPost.js ***!
+  \*******************************/
+/*! exports provided: default */
+/*! exports used: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_Head__ = __webpack_require__(/*! ../components/Head */ "./src/components/Head.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_pageExport__ = __webpack_require__(/*! ../components/pageExport */ "./src/components/pageExport.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_isomorphic_fetch__ = __webpack_require__(/*! isomorphic-fetch */ "./node_modules/isomorphic-fetch/fetch-npm-browserify.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_isomorphic_fetch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_isomorphic_fetch__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react_spinners_PacmanLoader__ = __webpack_require__(/*! react-spinners/PacmanLoader */ "./node_modules/react-spinners/PacmanLoader.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react_spinners_PacmanLoader___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_react_spinners_PacmanLoader__);
-var _jsxFileName = '/Applications/MAMP/htdocs/wp-content/themes/wordpress-react/react-src/src/pages/Blog.js';
+var _jsxFileName = '/Applications/MAMP/htdocs/wp-content/themes/wordpress-react/react-src/src/pages/BlogPost.js';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -50256,13 +50508,13 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
-var Blog = function (_React$Component) {
-    _inherits(Blog, _React$Component);
+var BlogPost = function (_React$Component) {
+    _inherits(BlogPost, _React$Component);
 
-    function Blog(props) {
-        _classCallCheck(this, Blog);
+    function BlogPost(props) {
+        _classCallCheck(this, BlogPost);
 
-        var _this = _possibleConstructorReturn(this, (Blog.__proto__ || Object.getPrototypeOf(Blog)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (BlogPost.__proto__ || Object.getPrototypeOf(BlogPost)).call(this, props));
 
         _this.timeIncrementMs = 50;
         _this.showSpinnerIfReturnGreaterThanMs = 200;
@@ -50274,7 +50526,7 @@ var Blog = function (_React$Component) {
         return _this;
     }
 
-    _createClass(Blog, [{
+    _createClass(BlogPost, [{
         key: 'componentWillUnmount',
         value: function componentWillUnmount() {
             clearInterval(this.incrementer);
@@ -50394,10 +50646,10 @@ var Blog = function (_React$Component) {
         }
     }]);
 
-    return Blog;
+    return BlogPost;
 }(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
 
-/* harmony default export */ __webpack_exports__["a"] = (Blog);
+/* harmony default export */ __webpack_exports__["a"] = (BlogPost);
 
 /***/ }),
 
@@ -50620,20 +50872,49 @@ var Page = function (_React$Component) {
             } else if (this.state.isLoading && this.state.msElapsed <= this.showSpinnerIfReturnGreaterThanMs) {
                 return null;
             }
-
+            if (typeof page.title === 'undefined') {
+                return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    __WEBPACK_IMPORTED_MODULE_2__components_pageExport__["i" /* Wrapper */],
+                    {
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 87
+                        },
+                        __self: this
+                    },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__components_Head__["a" /* default */], {
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 88
+                        },
+                        __self: this
+                    }),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'h2',
+                        {
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 89
+                            },
+                            __self: this
+                        },
+                        '404 Page Not Found.'
+                    )
+                );
+            }
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 __WEBPACK_IMPORTED_MODULE_2__components_pageExport__["i" /* Wrapper */],
                 {
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 87
+                        lineNumber: 94
                     },
                     __self: this
                 },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__components_Head__["a" /* default */], {
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 88
+                        lineNumber: 95
                     },
                     __self: this
                 }),
@@ -50642,7 +50923,7 @@ var Page = function (_React$Component) {
                     {
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 89
+                            lineNumber: 96
                         },
                         __self: this
                     },
@@ -50650,7 +50931,7 @@ var Page = function (_React$Component) {
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { dangerouslySetInnerHTML: { __html: page.content.rendered }, __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 90
+                        lineNumber: 97
                     },
                     __self: this
                 })
