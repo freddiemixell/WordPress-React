@@ -1,0 +1,30 @@
+{
+    "name": "wordpress-react",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@devloco/react-scripts-wptheme": "1.2.4",
+        "prop-types": "^15.6.2",
+        "react": "^16.5.2",
+        "react-burger-menu": "^2.5.3",
+        "react-dom": "^16.5.2",
+        "react-helmet": "^5.2.0",
+        "react-router-dom": "^4.3.1",
+        "react-router-with-props": "^0.1.3",
+        "react-spinners": "^0.4.5",
+        "styled-components": "^3.4.9",
+        "styled-icons": "^3.0.0"
+    },
+    "scripts": {
+        "crabuild": "react-scripts build",
+        "craeject": "react-scripts eject",
+        "crastart": "react-scripts start",
+        "cratest": "react-scripts test --env=jsdom",
+        "build": "wptheme-scripts build",
+        "start": "wptheme-scripts start",
+        "wpbuild": "wptheme-scripts wpbuild",
+        "wpstart": "wptheme-scripts wpstart"
+    },
+    "homepage": "/wp-content/themes/wordpress-react",
+    "browserLaunchTo": "http://localhost:8888"
+}
