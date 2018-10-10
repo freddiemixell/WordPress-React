@@ -1,8 +1,10 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import Head from '../components/Head';
 import { Wrapper, LoaderWrapper } from '../components/pageExport';
 import fetch from 'isomorphic-fetch';
 import PacmanLoader from 'react-spinners/PacmanLoader';
+import Blog from './Blog.js';
 
 class Page extends React.Component {
     
@@ -46,7 +48,6 @@ class Page extends React.Component {
     }
 
     componentDidMount() {
-
         const { slug } = this.props.match.params;
 
         this.incrementer = setInterval(() =>
@@ -68,9 +69,9 @@ class Page extends React.Component {
     }
     
     render() {
-
         const { page } = this.state;
-
+        const { pathname } = this.props.location;
+        if (pathname === '/blog/') return <Blog/>;
         if (this.state.isLoading &&
             this.state.msElapsed > this.showSpinnerIfReturnGreaterThanMs) {
             return (
@@ -100,4 +101,4 @@ class Page extends React.Component {
     }
 }
 
-export default Page;
+export default withRouter(Page);
